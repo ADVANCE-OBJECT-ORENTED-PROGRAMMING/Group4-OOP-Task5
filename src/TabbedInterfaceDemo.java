@@ -110,4 +110,18 @@ public class TabbedInterfaceDemo extends JFrame {
         return panel;
     }
 
+    // Tab 5: Help (simple info with label and hyperlink)
+    public JPanel createHelpPanel() {
+        JPanel panel = new JPanel(new BorderLayout());
+        panel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
+
+        JLabel helpLabel = new JLabel("<html><h2>Help & Support</h2>"
+                + "<p>For assistance, visit our "
+                + "<a href=''>website</a> or contact support.</p></html>");
+
+        panel.add(helpLabel, BorderLayout.NORTH);
+
+        return panel;
+    }
+
 }
