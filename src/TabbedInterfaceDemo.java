@@ -87,4 +87,27 @@ public class TabbedInterfaceDemo extends JFrame {
         return panel;
     }
 
+    // Tab 4: Messages (text area and buttons)
+    public JPanel createMessagesPanel() {
+        JPanel panel = new JPanel(new BorderLayout(10, 10));
+        panel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
+
+        JTextArea messageArea = new JTextArea();
+        messageArea.setLineWrap(true);
+        messageArea.setWrapStyleWord(true);
+
+        JScrollPane scrollPane = new JScrollPane(messageArea);
+
+        JPanel buttonPanel = new JPanel();
+        JButton sendButton = new JButton("Send");
+        JButton clearButton = new JButton("Clear");
+        buttonPanel.add(sendButton);
+        buttonPanel.add(clearButton);
+
+        panel.add(scrollPane, BorderLayout.CENTER);
+        panel.add(buttonPanel, BorderLayout.SOUTH);
+
+        return panel;
+    }
+
 }
